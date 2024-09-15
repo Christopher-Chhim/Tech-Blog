@@ -4,6 +4,12 @@ const sequelize = require('../config/db');
 class BlogPost extends Model {}
 
 BlogPost.init({
+    id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true,
+      },
     title: {
         type: DataTypes.STRING,
         allowNull: false
@@ -14,10 +20,14 @@ BlogPost.init({
     },
     userId: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        references: {
+            model: 'user_db',
+            key: 'id',
+        },
     },
     createdAt: {
         type: DataTypes.DATE,
+        allowNull: false,
         defaultValue: DataTypes.NOW
     }
 }, {
