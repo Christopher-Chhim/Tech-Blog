@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/db');
+const sequelize = require('../config/connection');
 
 class BlogPost extends Model {}
 
@@ -12,11 +12,11 @@ BlogPost.init({
       },
     title: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
     },
     content: {
         type: DataTypes.TEXT,
-        allowNull: false
+        allowNull: false,
     },
     userId: {
         type: DataTypes.INTEGER,
@@ -24,6 +24,7 @@ BlogPost.init({
             model: 'user_db',
             key: 'id',
         },
+        onDelete: 'CASCADE',
     },
     createdAt: {
         type: DataTypes.DATE,
