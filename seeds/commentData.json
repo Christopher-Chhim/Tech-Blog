@@ -1,0 +1,18 @@
+[
+    {
+      "content": "Great Article!",
+      "postId":1,
+      "userId":1
+    },
+    {
+        "content": "Sounds interesting!",
+        "postId":2,
+        "userId":1
+      },
+    {
+        "content": "Hopefully I can land a job in one of these sectors!",
+        "postId":3,
+        "userId":1
+      }
+  ]
+  

@@ -1,0 +1,17 @@
+{{#each posts as |post| }}
+
+
+<div class="card">
+  <div class="card-header">
+    {{post.title}}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{post.user_db.name}}</h5>
+    <p class="card-text">{{post.content}}</p>
+    <a href="/post/{{post.id}}" class="btn btn-primary">Read More</a>
+  </div>
+</div>
+
+
+
+{{/each}}

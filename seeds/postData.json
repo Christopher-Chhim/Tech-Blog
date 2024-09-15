@@ -1,15 +1,15 @@
 [
     {
-      "name": "Top Programming Languages",
-      "description": "Python, JavaScript, Java, C/C++, and C# are classified as the most popular programming languages in 2024 according to recent data."
+      "title": "Top Programming Languages",
+      "content": "Python, JavaScript, Java, C/C++, and C# are classified as the most popular programming languages in 2024 according to recent data."
     },
     {
-      "name": "Top Programming Frameworks",
-      "description": "According to current data, some of the most popular programming frameworks in 2024 include: React, Angular, Vue.js, Django, Express.js, Node.js, and Ruby on Rails."
+      "title": "Top Programming Frameworks",
+      "content": "According to current data, some of the most popular programming frameworks in 2024 include: React, Angular, Vue.js, Django, Express.js, Node.js, and Ruby on Rails."
     },
     {
-      "name": "In-Demand Tech Jobs",
-      "description": "Some of the hottest tech jobs of 2024 feature: Software Engineering, Cloud Engineering, Data Analytics, IT Support Technician, and Project Manager."
+      "title": "In-Demand Tech Jobs",
+      "content": "Some of the hottest tech jobs of 2024 feature: Software Engineering, Cloud Engineering, Data Analytics, IT Support Technician, and Project Manager."
     }
   ]
   

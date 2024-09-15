@@ -1,0 +1,16 @@
+<div class="card"></div>
+<h5 class="card-header">{{title}}</h5>
+<div class="card-body">
+    <h5 class="card-title">{{content}}</h5>
+    <p class="card-text">{{user_db.name}}</p>
+    {{#if logged_in}}
+    <form id="add-comment" data-post-id={{id}}>
+    <div class="mb-3"></div>
+    <label for="content" class="form-label">Add Comment</label>
+    <input type="text" class="form-control" id="content">
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+    {{/if}}
+</div>
+</div>
