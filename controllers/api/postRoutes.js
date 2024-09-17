@@ -36,4 +36,20 @@ router.delete('/:id', withAuth, async (req, res) => {
     }
 });
 
+router.put('/', withAuth, async (req, res) => {
+    try {
+        const newPost = await BlogPost.update({
+          ...req.body,
+        },{
+            where: {
+                id: req.body.blogId
+            }
+        }
+    );
+
+        res.status(200).json(newPost);
+    }   catch (err) {
+        res.status(400).json(err);
+    }
+});
 module.exports = router;

@@ -1,0 +1,28 @@
+<form id="postForm">
+    <label>Title</label>
+    <br>
+    <input id="title">
+    <br>
+    <label>Description</label>
+    <br>
+    <textarea id="content"></textarea>
+    <br>
+    <button type="submit">Add Post</button>
+</form>
+
+
+
+{{#each BlogPosts as |post| }}
+
+<div class="card"></div>
+  <div class="card-header">
+    <a href="/update/{{id}}">{{post.title}}</a>
+  </div>
+  <div class="card-body">
+    <p class="card-text">{{post.content}}</p>
+  </div>
+  <button class="delete-btn" data-id-delete="{{id}}">Delete Post</button>
+</div>
+
+{{/each}}
+<script src="/js/dashboard.js"></script>
