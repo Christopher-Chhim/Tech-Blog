@@ -2,7 +2,9 @@
 <h5 class="card-header">{{title}}</h5>
 <div class="card-body">
     <h5 class="card-title">{{content}}</h5>
-    <p class="card-text">{{user_db.name}}</p>
+    <div >
+    <p class="card-text">Posted by {{user_db.name}} on {{formatDate createdAt}}</p>
+    </div>
     {{#if logged_in}}
     <form id="add-comment" data-post-id={{id}}>
     <div class="mb-3"></div>
@@ -13,4 +15,12 @@
     </form>
     {{/if}}
 </div>
+{{#each Comments as |comment| }}
+<h3>{{comment.content}}</h3>
+<p>{{formatDate comment.createdAt}}</p>
+<p>{{comment.user_db.name}}</p>
+{{/each}}
 </div>
+{{#if logged_in}}
+<script src="/js/comment.js"></script>
+{{/if}}

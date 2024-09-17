@@ -37,7 +37,7 @@ router.post('/login', async (req, res) => {
   });
   
   router.post('/logout', (req, res) => {
-    if (req.session.logged_in) {
+    if (req.session.loggedIn) {
       // Destroy the session if logged in and return status code 204, meaning no content will be returned
       req.session.destroy(() => {
         res.status(204).end();

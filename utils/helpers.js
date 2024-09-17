@@ -12,7 +12,7 @@ const truncateText = (text, length) => {
 };
 
 const isLoggedIn = (session) => {
-    return session.logged_in;
+    return session.isLoggedIn;
 };
 
 const isAdmin = (user) => {

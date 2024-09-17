@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { BlogPost, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
-const { post } = require('./api');
+
 
 router.get('/', async (req, res) => {
     try {
@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
         });
 
         const posts = postData.map((post) => post.get({ plain: true}));
-        console.log("Home",req.session.logged_in,posts)
+        console.log("Home",req.session.loggedIn,posts)
         res.render('homepage', {
             posts,
             logged_in: req.session.loggedIn
@@ -61,9 +61,9 @@ router.get('/post/:id', async (req, res) => {
 // Use withAuth middleware to prevent access to route
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
-    const userData = await User.findByPk(req.session.user_id, {
+    const userData = await User.findByPk(req.session.userId, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Post }],
+      include: [{ model: BlogPost }],
     });
 
     if (!userData) {
@@ -83,7 +83,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-  if (req.session.logged_in) {
+  if (req.session.loggedIn) {
     res.redirect('/dashboard');
     return;
   }
@@ -92,7 +92,7 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/signup', (req, res) => {
-  if (req.session.logged_in) {
+  if (req.session.loggedIn) {
     res.redirect('/dashboard');
     return;
   }

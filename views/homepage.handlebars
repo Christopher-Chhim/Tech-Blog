@@ -7,6 +7,7 @@
   </div>
   <div class="card-body">
     <h5 class="card-title">{{post.user_db.name}}</h5>
+    <p>{{formatDate post.createdAt}}</p>
     <p class="card-text">{{post.content}}</p>
     <a href="/post/{{post.id}}" class="btn btn-primary">Read More</a>
   </div>

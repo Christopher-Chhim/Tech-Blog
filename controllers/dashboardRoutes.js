@@ -7,7 +7,7 @@ router.get('/', withAuth, async (req, res) => {
     try {
       const postData = await Post.findAll({
         where: {
-          user_id: req.session.user_id,
+          user_id: req.session.userId,
         },
       });
   
@@ -15,7 +15,7 @@ router.get('/', withAuth, async (req, res) => {
   
       res.render('dashboard', {
         posts,
-        logged_in: true,
+        loggedIn: true,
       });
     } catch (err) {
       res.status(500).json(err);
