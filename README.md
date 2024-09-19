@@ -2,7 +2,7 @@
 
 ## Description
 
-My motivation in developing this project was to become make a complex web application implementing everything I learned. My tech blog uses the MVC paradigm for the structure, Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication. Ever since I started boot camp, I've been reading articles about technical concepts and recent advancements and blogging my new discoveries to leave a digital footprint for my future self and to those that are in need of it. As a developer who writes about tech, I want a CMS-style blog site so that I can publish articles, blog posts, and my thoughts and opinions.
+My motivation in developing this project was to make a complex web application implementing everything I learned. My tech blog uses the MVC paradigm for the structure, Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication. Ever since I started boot camp, I've been reading articles about technical concepts and recent advancements and blogging my new discoveries to leave a digital footprint for my future self and to those that are in need of it. As a developer who writes about tech, I want a CMS-style blog site so that I can publish articles, blog posts, and my thoughts and opinions.
 
 ## Installation
 
